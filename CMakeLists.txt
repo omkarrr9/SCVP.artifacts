@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 
 project(SCVP_Artifacts)
+set(SYSTEMC_AMS_LIBRARY ${SYSTEMC_AMS_HOME}/lib-linux64/libsystemc-ams.so)
+find_library(SYSTEMC_AMS_LIBRARY NAMES systemc-ams HINTS ${SYSTEMC_AMS_HOME}/lib-linux64)
 
 find_library(SYSTEMC_LIBRARY 
     NAMES systemc
